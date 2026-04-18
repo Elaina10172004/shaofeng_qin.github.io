@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shaofeng Qin</title>
+  <style>
+    :root {
+      --bg: #f4efe6;
+      --panel: rgba(255, 250, 242, 0.92);
+      --ink: #1f2a37;
+      --muted: #5f6b76;
+      --accent: #9f3d22;
+      --line: rgba(31, 42, 55, 0.12);
+      --shadow: 0 18px 48px rgba(57, 44, 30, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(159, 61, 34, 0.14), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(32, 85, 67, 0.12), transparent 28%),
+        linear-gradient(135deg, #f8f4ec, var(--bg));
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    main {
+      width: min(760px, 100%);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: 56px 40px 32px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(159, 61, 34, 0.1);
+      color: var(--accent);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 8vw, 58px);
+      line-height: 1.02;
+      font-weight: 700;
+    }
+
+    .cn-name {
+      display: block;
+      margin-top: 10px;
+      font-size: clamp(20px, 4vw, 28px);
+      color: var(--muted);
+    }
+
+    .summary {
+      margin: 24px 0 0;
+      max-width: 42rem;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0;
+    }
+
+    section {
+      padding: 28px 40px 34px;
+      border-right: 1px solid var(--line);
+    }
+
+    section:last-child {
+      border-right: 0;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .email {
+      word-break: break-word;
+    }
+
+    @media (max-width: 640px) {
+      .hero, section {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      section {
+        border-right: 0;
+        border-top: 1px solid var(--line);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero">
+      <div class="tag">Academic Homepage</div>
+      <h1>
+        Shaofeng Qin
+        <span class="cn-name">秦绍峰</span>
+      </h1>
+      <p class="summary">
+        Student at Beijing University of Posts and Telecommunications. This page is maintained as a
+        simple academic homepage for profile verification and research-related contact.
+      </p>
+    </div>
+    <div class="grid">
+      <section>
+        <h2>Affiliation</h2>
+        <p>Beijing University of Posts and Telecommunications</p>
+      </section>
+      <section>
+        <h2>Email</h2>
+        <p class="email"><a href="mailto:star@bupt.edu.cn">star@bupt.edu.cn</a></p>
+      </section>
+      <section>
+        <h2>Status</h2>
+        <p>Student</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
